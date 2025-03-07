@@ -78,14 +78,18 @@ npx prisma init --datasource-provider sqlite
 ````
 
 ➡️ Jeg begynder at bygge modellen efter tutorialen 
+
 ````
 npx prisma migrate dev --name init
+npx prisma generate
 npx prisma db seed
 npx prisma studio
 npm run dev
 mkdir -p lib && touch lib/prisma.ts
 npm run dev
 ````
+
+Se også https://www.prisma.io/docs/orm/reference/prisma-cli-reference.
 
 ➡️ Jeg begynder at bygge modellen efter tutorialen
 
