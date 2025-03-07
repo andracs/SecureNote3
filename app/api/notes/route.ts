@@ -11,6 +11,35 @@ export async function GET(request: Request) {
   });
 }
 
+/*
+{
+    "title": "X",
+    "author": "Evgeniy",
+    "content": "X",
+}
+*/
+
+// POST endpoint to create a new note
+export async function POST(request: Request) {
+  // Parse the request body
+  try {
+    const body = await request.json();
+    console.log("Body --> " + body);
+
+    await prisma.note.create({ data: body });
+
+    return new Response(JSON.stringify(body), {
+      status: 201,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  } catch (e) {
+    if (e instanceof Error) {
+      return new Response(e.message, { status: 400 });
+    }
+    return new Response('Unknown error', { status: 400 });
+  }
+}
+
 // PUT use notes/[id] instead
 export async function PUT(request: Request) {
   return new Response("Use notes/[id] instead", { status: 501 });
@@ -21,26 +50,3 @@ export async function DELETE(request: Request) {
   return new Response("Use notes/[id] instead", { status: 501 });
 }
 
-
-// POST endpoint to create a new note
-export async function POST(request: Request) {
-  // Parse the request body
-  try {
-    const body = await request.json();
-    console.log("Body --> " + body);
-    const { note } = body;
-    const newNote = { id: Date.now(), note };
-
-    return new Response(JSON.stringify(newNote), {
-      status: 201,
-      headers: { 'Content-Type': 'application/json' }
-    });
-  } catch (e) {
-    if (e instanceof Error) {
-      return new Response(e.message, { status: 400 });
-    }
-    return new Response('Unknown error', { status: 400 });
-  }
-
-  // e.g. Insert new user into your DB
-}
