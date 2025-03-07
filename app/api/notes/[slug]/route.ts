@@ -1,4 +1,6 @@
-// CREATE not implemented
+import prisma from '@/lib/prisma'
+
+// CREATE not implemented here 
 export async function CREATE(request: Request) {
    return new Response("Not implemented", { status: 501 });
 }
