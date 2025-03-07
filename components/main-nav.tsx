@@ -34,28 +34,38 @@ export function MainNav() {
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="px-2">
-              Server Side
+              Noter
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/server-example" title="RSC Example">
-                  Protecting React Server Component.
+                <ListItem href="/server-example" title="Alle noter">
+                  Viser alle noter
                 </ListItem>
-                <ListItem href="/middleware-example" title="Middleware Example">
-                  Using Middleware to protect pages & APIs.
+                <ListItem href="/middleware-example" title="Ny note">
+                  Opretter ny note
                 </ListItem>
-                <ListItem href="/api-example" title="Route Handler Example">
-                  Getting the session inside an API Route.
+                <ListItem href="/api-example" title="API">
+                  Viser API'ens dokumentation
                 </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
-              href="/client-example"
+              href="/db-demo"
               className={navigationMenuTriggerStyle()}
             >
-              Client Side
+              Database
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              href="
+              https://github.com/andracs/SecureNote3
+              "
+              className={navigationMenuTriggerStyle()}
+            >
+              🧑‍💻 Koden på Github
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
