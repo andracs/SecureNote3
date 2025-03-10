@@ -49,6 +49,9 @@ Jeg har delvist genereret, delvist kodet projektet. Disse trin har jeg været ig
 
 ➡️ Bootstrapper Next Auth med et eksempelprojekt som beskrevet på https://next-auth.js.org/getting-started/example 
 
+Jeg kloner eksempel-app:
+https://github.com/nextauthjs/next-auth-example 
+
 ````
 
 git clone https://github.com/nextauthjs/next-auth-example.git\
@@ -68,7 +71,8 @@ openssl rand -hex 32
 npm run dev
 ````
 
-➡️ Så tilføjer jeg Prisma som ORM som beskrevet i tutorialen https://www.prisma.io/docs/guides/nextjs
+➡️ Så tilføjer jeg Prisma som ORM som beskrevet i tutorialen https://www.prisma.io/docs/guides/nextjs 
+
 
 ````
 npm install prisma --save-dev\
