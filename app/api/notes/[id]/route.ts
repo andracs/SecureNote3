@@ -55,6 +55,8 @@ export async function PUT(request: NextRequest,
   const noteId = (await params).id;
   const data = await request.json();
 
+  console.log(data);
+  
   try {
     const updatedNote = await prisma.note.update({
       where: {

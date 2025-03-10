@@ -38,10 +38,10 @@ export function MainNav() {
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/server-example" title="Alle noter">
+                <ListItem href="/notes" title="Alle noter">
                   Viser alle noter
                 </ListItem>
-                <ListItem href="/middleware-example" title="Ny note">
+                <ListItem href="/notes/new" title="Ny note">
                   Opretter ny note
                 </ListItem>
                 <ListItem href="/api-example" title="API">

@@ -3,8 +3,9 @@
 An experimental implementation of Securenote in NextJS. 
 
 ## Funktionalitets TODO
-- Endpoints skal kobles på DB
-- API skal kobles på frontend
+- ~~Endpoints skal kobles på DB~~
+- ~~API skal kobles på frontend~~
+- Fortsat med form til ny note
 - Auth skal sættes på de relevente routes
 - Unit tests
 - Deploy
@@ -103,3 +104,6 @@ Når jeg bygger API'en med [Building the API part](https://nextjs.org/blog/build
 - **POST /api/notes** --> Create a new note.
 - **PUT /api/notes/[id]** --> Update an existing note.
 - **DELETE /api/notes/[id]** --> Delete an existing note.
+
+## Tailwind styling
+Se på (link)[https://flowbite.com/docs/components/forms/]
