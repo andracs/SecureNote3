@@ -13,26 +13,15 @@ export default function Page() {
   }, [])
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="text-3xl font-bold">Route Handler Usage</h1>
-      <p>
-        This page fetches data from an API{" "}
-        <CustomLink href="https://nextjs.org/docs/app/building-your-application/routing/route-handlers">
-          Route Handler
-        </CustomLink>
-        . The API is protected using the universal{" "}
-        <CustomLink href="https://nextjs.authjs.dev#auth">
-          <code>auth()</code>
-        </CustomLink>{" "}
-        method.
+      <h1 className="text-3xl font-bold">API Endpoints Documentation</h1>
+      <ul>
+        <li><strong>GET /api/notes</strong> &mdash; Fetch all notes.</li>
+        <li><strong>POST /api/notes</strong> &mdash; Create a new note.</li>
+        <li><strong>PUT /api/notes/[id]</strong> &mdash; Update an existing note.</li>
+        <li><strong>DELETE /api/notes/[id]</strong> &mdash; Delete an existing note.</li>
+      </ul>
+      <p>Brug fx <a href="https://curl.se" className="text-blue-600 font-bold">curl</a> eller <a href="https://www.postman.com" className="text-blue-600 font-bold">Postman</a> til at arbejde med API'en.
       </p>
-      <div className="flex flex-col rounded-md bg-gray-100">
-        <div className="rounded-t-md bg-gray-200 p-4 font-bold">
-          Data from API Route
-        </div>
-        <pre className="whitespace-pre-wrap break-all px-4 py-6">
-          {JSON.stringify(data, null, 2)}
-        </pre>
-      </div>
     </div>
   )
 }

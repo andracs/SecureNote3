@@ -8,13 +8,13 @@ An experimental implementation of Securenote in NextJS.
 - ~~Fortsat med form til ny note~~
 - ~~Når jeg sletter, så forsvinder den ikke fra cache~~
 - ~~http://localhost:3000/notes/41 giver 404, så skal den ikke vise Loading...~~
-- Tilføj Entra
-- Lav http://localhost:3000/api-example 
+- ~~Slet Entra~~
+- ~~Lav http://localhost:3000/api-example~~
+- ?? Tilføj relevant delemekanisme??
 - Auth skal sættes på de relevente routes: 
 http://localhost:3000/notes
 http://localhost:3000/notes/new
 http://localhost:3000/db-demo
-- ?? Tilføj relevant delemekanisme??
 - Unit tests
 - Deploy - Vercel eller GCloud? 
 - Avancerede tests

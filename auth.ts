@@ -3,7 +3,7 @@ import "next-auth/jwt"
 
 
 import GitHub from "next-auth/providers/github"
-import MicrosoftEntraId from "next-auth/providers/microsoft-entra-id"
+// import MicrosoftEntraId from "next-auth/providers/microsoft-entra-id"
 import Passkey from "next-auth/providers/passkey"
 import { createStorage } from "unstorage"
 import memoryDriver from "unstorage/drivers/memory"
@@ -26,7 +26,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: UnstorageAdapter(storage),
   providers: [
     GitHub,
-    MicrosoftEntraId,
+    // MicrosoftEntraId,
     Passkey({
       formFields: {
         email: {
