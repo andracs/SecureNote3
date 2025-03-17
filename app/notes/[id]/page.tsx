@@ -10,8 +10,16 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
             const { id } = await params;
             setId(id);
             const response = await fetch(`/api/notes/${id}`);
-            const notes = await response.json();
-            setNotes(notes);
+            if (response.status === 404) {
+                setNotes(undefined);
+                return;
+            }
+            if (!response.ok) {
+                console.error("Failed to fetch note");
+                return;
+            }
+            const notesData = await response.json();
+            setNotes(notesData);
         }
         fetchData();
     }, [params]);
@@ -34,8 +42,12 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
         console.log(updatedNote);
     }
 
+    if (notes === undefined) {
+        return <div>404 - Note not found</div>;
+    }
+
     if (!notes) {
-        return <div>Loading...</div>;
+        return <div>Loading..</div>;
     }
 
     return (

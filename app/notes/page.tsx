@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 
 export default function Page({ params }: { params: Promise<{ id: string }> }) {
-  const [notes, setNotes] = useState(null);
+  const [notes, setNotes] = useState<{ id: string; title: string; content: string; author: string }[]>([]);
   const [id, setId] = useState<string | null>(null);
 
   useEffect(() => {

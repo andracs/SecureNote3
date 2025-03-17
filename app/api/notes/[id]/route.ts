@@ -30,12 +30,9 @@ export async function DELETE(request: NextRequest,
   const noteId = (await params).id;
 
   try {
-    const updatedNote = await prisma.note.update({
+    const updatedNote = await prisma.note.delete({
       where: {
         id: Number(noteId)
-      },
-      data: {
-        published: false
       }
     });
 

@@ -5,10 +5,18 @@ An experimental implementation of Securenote in NextJS.
 ## Funktionalitets TODO
 - ~~Endpoints skal kobles på DB~~
 - ~~API skal kobles på frontend~~
-- Fortsat med form til ny note
-- Auth skal sættes på de relevente routes
+- ~~Fortsat med form til ny note~~
+- ~~Når jeg sletter, så forsvinder den ikke fra cache~~
+- ~~http://localhost:3000/notes/41 giver 404, så skal den ikke vise Loading...~~
+- Tilføj Entra
+- Lav http://localhost:3000/api-example 
+- Auth skal sættes på de relevente routes: 
+http://localhost:3000/notes
+http://localhost:3000/notes/new
+http://localhost:3000/db-demo
+- ?? Tilføj relevant delemekanisme??
 - Unit tests
-- Deploy
+- Deploy - Vercel eller GCloud? 
 - Avancerede tests
 - CD/CI & DevOps
 
